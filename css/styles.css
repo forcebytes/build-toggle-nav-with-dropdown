@@ -141,39 +141,10 @@ nav {
     }
     .main-menu li {
         border-bottom: none;
+        
     }
     .dropdown-menu {
         position: absolute;
         background-color: white;
     }
 }
-
-/* wide screen flex container  */
-/* @media (min-width: 1301px){
-    .monkey-icon,
-    .menu-text {
-        display: none;
-    } 
-    header nav {
-        max-height: 0;
-        overflow: visible;    
-        background-color: white;
-        width: auto;
-        transition: none;
-        position: static;       
-    }
-    .main-menu {
-        display: flex;
-
-    }
-    .main-menu li {
-        border-bottom: none;
-    }
-    .dropdown-menu {
-        position: absolute;
-        background-color: white;
-    }
-} */
-
-
-
