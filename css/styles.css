@@ -3,6 +3,10 @@ body {
     background: linear-gradient(rgb(255, 105, 180),rgb(255,186, 0));
     font-family: 'Nunito', sans-serif;
 }
+.container {
+    padding:  1rem;
+    position: relative;
+}
 
 /* typography  */
 h1 a {
@@ -25,12 +29,13 @@ h2 {
 
 /* ==================== header ================= */
 header {
-    background-color: white;
+    background-color: white;    
 }
 
 .menu-icon {
     width: 40px;
     text-align: center;
+    cursor: pointer;
 }
 
 header .flex-container {
@@ -38,6 +43,77 @@ header .flex-container {
     justify-content: space-between;
 }
 
+header a svg {
+    width: 12px;
+    height: 12px;
+    
+}
+
+/* main nav  */
+.main-menu li {
+    line-height: 85px;
+    margin: 0 25px;
+    border-bottom: 1px solid black;
+}
+
+.main-menu li:last-of-type {
+    border-bottom: none;
+}
+
+.main-menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f89d70;
+    font-weight: 700;
+    display: block;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+.main-menu a:hover,
+.main-menu a:active {
+    background-color: blanchedalmond;
+    border-radius: 5px;
+}
+
+.dropdown-menu a {
+    color: #00263e;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.main-menu svg:last-of-type {
+    /* this only works inside a flex container  */
+    margin-left: auto;
+}
+
+.main-menu svg:first-of-type {
+    margin-right: 8px;
+}
+/* ===== hide / show dropdowns ===== */
+.dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.main-menu li:hover > .dropdown-menu {
+    max-height: initial;
+}
+
+/* hide / show main menu with toggle icon  */
+
+nav {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    background-color: white;
+    width: 100vw;
+    transition: all 1s ease-in-out;
+}
+.show-nav {
+    max-height: initial;
+}
 @media (min-width: 1300px) {
     .container {
         padding: 1rem 0;        
@@ -45,4 +121,5 @@ header .flex-container {
         margin: 0 auto;
     }
 }
+
 
